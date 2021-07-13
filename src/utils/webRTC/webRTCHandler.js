@@ -40,7 +40,7 @@ export const getLocalStream = () => {
 const createPeerConnection = () => {
   const turnServers = getTurnServers()
   const configuration = {
-    iceServers: [...turnServers, {url: 'stun: stun.l.google.com:19302'}]
+    iceServers: [...turnServers, {url: 'stun:stun.l.google.com:19302'}]
   };
   peerConnection = new RTCPeerConnection(configuration);
 
